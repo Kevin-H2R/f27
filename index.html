@@ -76,8 +76,8 @@ footer a,p a{color:var(--accent)}
 <option value="0">None</option><option value="1">1</option><option value="2">2</option>
 <option value="3">3</option><option value="4">4</option><option value="5">5 or 6</option>
 </select></label>
-<label>Last year's taxable income (만원) <input name="income" type="number" min="0" step="100" value="4000"></label>
-<p class="muted">Use the amount on your 소득금액증명 from Hometax, not your contract salary.</p>
+<label>Last year's taxable income, in millions of won <input name="income" type="number" min="0" step="1" value="40" placeholder="e.g. 40 for ₩40,000,000"></label>
+<p class="muted">Immigration uses the income on your tax certificate (소득금액증명), not your contract salary. Get it on Hometax: 민원증명 → 소득금액증명, or print it at any 무인민원발급기. It is usually lower than your gross salary.</p>
 
 <h2>Bonus points <span class="muted">(max 40)</span></h2>
 <label>University bonus <select name="bonusUni">
@@ -99,12 +99,12 @@ footer a,p a{color:var(--accent)}
 
 <h2>Deductions</h2>
 <label>Immigration Act fines, last 3 to 5 years <select name="dedImm">
-<option value="0">None</option><option value="1">Fine 50만 to 100만 (−10)</option>
-<option value="2">Fine 100만 to 300만 (−20)</option><option value="3">Fine 300만+, departure order or deportation (−30)</option>
+<option value="0">None</option><option value="1">Fine ₩500,000 to ₩1,000,000 (−10)</option>
+<option value="2">Fine ₩1,000,000 to ₩3,000,000 (−20)</option><option value="3">Fine ₩3,000,000+, departure order or deportation (−30)</option>
 </select></label>
 <label>Criminal fines, last 3 years <select name="dedCrim">
-<option value="0">None</option><option value="1">Under 200만 (−20)</option>
-<option value="2">200만 to 300만 (−30)</option><option value="3">300만+ (disqualified)</option>
+<option value="0">None</option><option value="1">Under ₩2,000,000 (−20)</option>
+<option value="2">₩2,000,000 to ₩3,000,000 (−30)</option><option value="3">₩3,000,000+ (disqualified)</option>
 </select></label>
 </form>
 
@@ -147,15 +147,15 @@ const f = document.getElementById('f');
 const LABELS = { age: 'Age', edu: 'Education', korean: 'Korean', income: 'Income', bonus: 'Bonus', ded: 'Deductions' };
 function read() {
   const d = Object.fromEntries(new FormData(f));
-  return { age: +d.age, edu: d.edu, korean: +d.korean, income: +d.income * 10000, bonusUni: d.bonusUni,
+  return { age: +d.age, edu: d.edu, korean: +d.korean, income: +d.income * 1e6, bonusUni: d.bonusUni,
     bonus: [...f.querySelectorAll('[name=bonus]:checked')].map(e => e.value), volunteer: +d.volunteer, dedImm: +d.dedImm, dedCrim: +d.dedCrim };
 }
 function gapTips(a, s) {
   const tips = [];
   if (s.korean < 20) { const next = a.korean + 1; tips.push(`TOPIK/KIIP level ${next}: +${score({ ...a, korean: next }).korean - s.korean} points`); }
   if (!a.bonus.includes('kiip5')) tips.push('Finish KIIP level 5: +10 bonus on top of the 20 language points');
-  const nextIncome = [[30e6, '3,000만'], [40e6, '4,000만'], [50e6, '5,000만'], [60e6, '6,000만']].find(([v]) => a.income < v);
-  if (nextIncome) tips.push(`Taxable income above ${nextIncome[1]}원: +${score({ ...a, income: nextIncome[0] }).income - s.income} points`);
+  const nextIncome = [[30e6, '30 million'], [40e6, '40 million'], [50e6, '50 million'], [60e6, '60 million']].find(([v]) => a.income < v);
+  if (nextIncome) tips.push(`Taxable income above ${nextIncome[1]} won: +${score({ ...a, income: nextIncome[0] }).income - s.income} points`);
   if (a.volunteer < 3) tips.push('Register volunteer hours on 1365.go.kr now, it only counts from registration date');
   return tips;
 }
