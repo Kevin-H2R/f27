@@ -87,8 +87,8 @@ ul.kit li{margin:8px 0}footer{margin-top:48px;font-size:.85rem;color:var(--muted
 <a class="cta" id="guide" href="#">Get the guide (PDF)</a>
 <a class="cta" id="kofi" href="#" style="background:#ff5e5b">Buy me a coffee</a>
 
-<h2>Just landed? Things I actually bought</h2>
-<p class="muted">Affiliate links to Coupang. Same price for you, a few won for me.</p>
+<h2 id="kit-h">Just landed? Things I actually bought</h2>
+<p class="muted" id="kit-p">Affiliate links to Coupang. Same price for you, a few won for me.</p>
 <ul class="kit" id="kit"></ul>
 
 <h2>FAQ</h2>
@@ -104,22 +104,14 @@ ul.kit li{margin:8px 0}footer{margin-top:48px;font-size:.85rem;color:var(--muted
 import { score, PASS } from './score.js';
 // ---- edit these ----
 const CONFIG = {
-  guide: 'https://GUMROAD_URL',      // TODO Kevin: Gumroad product link
-  kofi: 'https://ko-fi.com/KOFI_USER', // TODO Kevin: Ko-fi username
-  kit: [ // TODO Kevin: replace href with Coupang Partners short links
-    ['Korean-English keyboard stickers', 'https://link.coupang.com/TODO'],
-    ['220V power strip with USB-C', 'https://link.coupang.com/TODO'],
-    ['Air purifier (fine dust season starts in March)', 'https://link.coupang.com/TODO'],
-    ['Dehumidifier for 장마', 'https://link.coupang.com/TODO'],
-    ['Electric blanket for 온돌-less rooms', 'https://link.coupang.com/TODO'],
-    ['T-money card', 'https://link.coupang.com/TODO'],
-    ['Document folder for immigration paperwork', 'https://link.coupang.com/TODO'],
-    ['Shoe rack for the 현관', 'https://link.coupang.com/TODO'],
-  ],
+  guide: '', // Gumroad product link, empty hides the button
+  kofi: 'https://ko-fi.com/kevinh2r',
+  kit: [], // [['title','https://link.coupang.com/a/xxxx'], ...] empty hides the section
 };
 // --------------------
-document.getElementById('guide').href = CONFIG.guide;
+const g = document.getElementById('guide'); g.href = CONFIG.guide; g.hidden = !CONFIG.guide;
 document.getElementById('kofi').href = CONFIG.kofi;
+document.getElementById('kit-h').hidden = document.getElementById('kit-p').hidden = !CONFIG.kit.length;
 document.getElementById('kit').innerHTML = CONFIG.kit.map(([t, h]) => `<li><a href="${h}" rel="sponsored nofollow" target="_blank">${t}</a></li>`).join('');
 
 const f = document.getElementById('f');
