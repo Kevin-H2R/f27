@@ -6,31 +6,60 @@
 <title>F-2-7 Points Calculator (2026) – Korea Points-Based Residence Visa</title>
 <meta name="description" content="Free F-2-7 visa points calculator using the December 2025 table. Enter age, degree, TOPIK/KIIP level and income to see if you reach 80 points, and what gets you there.">
 <link rel="canonical" href="https://kevin-h2r.github.io/f27/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fff;--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--ok:#1a7f37;--bad:#b42318;--accent:#2563eb}
-@media(prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#aaa;--line:#333;--accent:#60a5fa}}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
-main{max-width:640px;margin:0 auto;padding:24px 16px}
-h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.2rem;margin:32px 0 8px}
-label{display:block;margin:14px 0 4px;font-weight:600}
-select,input{width:100%;padding:10px;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
-.chk{display:flex;gap:8px;align-items:center;font-weight:400;margin:6px 0}.chk input{width:auto}
-.muted{color:var(--muted);font-size:.9rem}
-#result{position:sticky;top:0;background:var(--bg);border-bottom:2px solid var(--line);padding:12px 0;margin:0 -16px;padding-inline:16px;z-index:1}
-#total{font-size:2rem;font-weight:700}.ok{color:var(--ok)}.bad{color:var(--bad)}
-table{width:100%;border-collapse:collapse;font-size:.95rem}td{padding:4px 0;border-bottom:1px solid var(--line)}td:last-child{text-align:right}
-.cta{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin:8px 8px 0 0}
-ul.kit li{margin:8px 0}footer{margin-top:48px;font-size:.85rem;color:var(--muted)}
+:root{--bg:#f7f1e8;--card:#fffdf9;--fg:#2a2420;--muted:#7b6f64;--line:#e9dfd2;--accent:#b9502f;--accent-soft:#f6e3d8;--ok:#3f7d5a;--ok-soft:#e3efe6;--bad:#b5432e;--bad-soft:#f8e1dc;--shadow:0 1px 2px rgba(60,40,20,.05),0 8px 24px rgba(60,40,20,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:680px;margin:0 auto;padding:40px 16px 64px}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.01em;line-height:1.15}
+h1{font-size:2.4rem;margin:0 0 10px}
+h2{font-size:1.35rem;margin:40px 0 12px}
+.lede{color:var(--muted);margin:0 0 24px;font-size:1.05rem}
+.lede strong{color:var(--fg)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow)}
+#result{position:sticky;top:12px;z-index:1;margin-bottom:24px}
+.score{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+#total{font-family:Fraunces,Georgia,serif;font-size:3rem;font-weight:600;line-height:1}
+.of{color:var(--muted);font-size:1.1rem}
+#verdict{margin-left:auto;padding:4px 12px;border-radius:999px;font-size:.85rem;font-weight:600}
+.ok{background:var(--ok-soft);color:var(--ok)}.bad{background:var(--bad-soft);color:var(--bad)}
+.bar{height:8px;background:var(--line);border-radius:999px;margin:14px 0 16px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--accent);border-radius:999px;transition:width .3s}
+.bar i.ok{background:var(--ok)}
+summary{cursor:pointer;font-size:.88rem;color:var(--muted);font-weight:500;list-style:none;display:flex;align-items:center;gap:6px}summary::before{content:"▸";font-size:.75rem;transition:transform .15s}details[open] summary::before{transform:rotate(90deg)}details[open] summary{margin-bottom:6px}
+table{width:100%;border-collapse:collapse;font-size:.92rem;color:var(--muted)}
+td{padding:5px 0;border-top:1px dashed var(--line)}td:last-child{text-align:right;color:var(--fg);font-weight:600;font-variant-numeric:tabular-nums}
+form h2:first-of-type{margin-top:0}
+form h2{font-size:1.1rem;margin:28px 0 4px}
+label{display:block;margin:16px 0 6px;font-weight:500;font-size:.95rem}
+select,input{width:100%;padding:11px 12px;font:inherit;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--fg);transition:border-color .15s,box-shadow .15s}
+select:focus,input:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin:8px 0}.chk input{width:18px;height:18px;margin-top:3px;accent-color:var(--accent)}
+.muted{color:var(--muted);font-size:.88rem}
+#gap{padding-left:20px}#gap li{margin:6px 0}
+.cta{display:inline-block;padding:12px 20px;border-radius:10px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin:10px 10px 0 0;transition:transform .1s,filter .15s}
+.cta:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.cta.alt{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+ul.kit{list-style:none;padding:0;display:grid;gap:8px}
+ul.kit li a{display:block;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px;color:var(--fg);text-decoration:none}
+ul.kit li a:hover{border-color:var(--accent)}
+.faq p{margin:0 0 14px}.faq strong{display:block;font-weight:600}
+footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+footer a,p a{color:var(--accent)}
 </style>
 </head>
 <body><main>
 <h1>F-2-7 Points Calculator</h1>
-<p class="muted">Korea's points-based residence visa. You need <strong>80 points</strong>. Table revised 18 Dec 2025. Nothing you type leaves your browser.</p>
+<p class="lede">Korea's points-based residence visa. You need <strong>80 points</strong>. Table revised 18 Dec 2025. Nothing you type leaves your browser.</p>
 
-<div id="result"><span id="total">0</span> / 80 <span id="verdict"></span>
-<table id="breakdown"></table></div>
+<div id="result" class="card"><div class="score"><span id="total">0</span><span class="of">/ 80 points</span><span id="verdict"></span></div>
+<div class="bar"><i id="fill"></i></div>
+<details><summary>Breakdown</summary><table id="breakdown"></table></details></div>
 
-<form id="f">
+<form id="f" class="card">
+<h2>Your profile</h2>
 <label>Age <input name="age" type="number" min="18" max="99" value="30"></label>
 <label>Highest degree <select name="edu">
 <option value="none">None / high school</option>
@@ -85,17 +114,17 @@ ul.kit li{margin:8px 0}footer{margin-top:48px;font-size:.85rem;color:var(--muted
 <h2>I went through this myself</h2>
 <p>French engineer, 5 years in Korea, got the F-2-7 on a points file I built from scratch. The guide covers the documents, the Hometax screens and the timeline, in the order you actually need them. <!-- TODO Kevin: rewrite in your own words, add what went wrong for you --></p>
 <a class="cta" id="guide" href="#">Get the guide (PDF)</a>
-<a class="cta" id="kofi" href="#" style="background:#ff5e5b">Buy me a coffee</a>
+<a class="cta alt" id="kofi" href="#">Buy me a coffee</a>
 
 <h2 id="kit-h">Just landed? Things I actually bought</h2>
 <p class="muted" id="kit-p">Affiliate links to Coupang. Same price for you, a few won for me.</p>
 <ul class="kit" id="kit"></ul>
 
-<h2>FAQ</h2>
+<h2>FAQ</h2><div class="faq">
 <p><strong>Do I need TOPIK?</strong> No. If age, degree and income already reach 80, Korean is optional. It is the cheapest 5 to 20 points for most people though.</p>
 <p><strong>How long must I have stayed?</strong> 3 consecutive years on E-1 to E-7 or D-5 to D-9, waived if last year's taxable income was 40 million won or more.</p>
 <p><strong>Which income counts?</strong> The taxable income on last year's 소득금액증명 issued by the National Tax Service. Contract salary is not used.</p>
-<p><strong>Do university bonuses stack?</strong> No. Only the highest one counts, and all bonuses together cap at 40.</p>
+<p><strong>Do university bonuses stack?</strong> No. Only the highest one counts, and all bonuses together cap at 40.</p></div>
 
 <footer>Not legal advice. Points tables change; confirm on <a href="https://www.hikorea.go.kr">HiKorea</a> or at your immigration office before applying. Source table: Ministry of Justice revision of 18 Dec 2025.</footer>
 </main>
@@ -136,6 +165,7 @@ function render() {
   const v = document.getElementById('verdict');
   v.textContent = s.pass ? 'eligible' : (a.dedCrim === 3 ? 'disqualified' : `${PASS - s.total} short`);
   v.className = s.pass ? 'ok' : 'bad';
+  const fill = document.getElementById('fill'); fill.style.width = Math.min(100, s.total / PASS * 100) + '%'; fill.className = s.pass ? 'ok' : '';
   document.getElementById('breakdown').innerHTML = Object.entries(LABELS).map(([k, l]) => `<tr><td>${l}</td><td>${s[k]}</td></tr>`).join('');
   const tips = s.pass ? [] : gapTips(a, s);
   document.getElementById('gap-h').hidden = !tips.length;
