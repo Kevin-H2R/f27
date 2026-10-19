@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>F-2-7 Points Calculator (2026) – Korea Points-Based Residence Visa</title>
+<meta name="description" content="Free F-2-7 visa points calculator using the December 2025 table. Enter age, degree, TOPIK/KIIP level and income to see if you reach 80 points, and what gets you there.">
+<link rel="canonical" href="https://f27points.com/">
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--muted:#666;--line:#e5e5e5;--ok:#1a7f37;--bad:#b42318;--accent:#2563eb}
+@media(prefers-color-scheme:dark){:root{--bg:#111;--fg:#eee;--muted:#aaa;--line:#333;--accent:#60a5fa}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,sans-serif}
+main{max-width:640px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6rem;margin:0 0 4px}h2{font-size:1.2rem;margin:32px 0 8px}
+label{display:block;margin:14px 0 4px;font-weight:600}
+select,input{width:100%;padding:10px;font:inherit;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
+.chk{display:flex;gap:8px;align-items:center;font-weight:400;margin:6px 0}.chk input{width:auto}
+.muted{color:var(--muted);font-size:.9rem}
+#result{position:sticky;top:0;background:var(--bg);border-bottom:2px solid var(--line);padding:12px 0;margin:0 -16px;padding-inline:16px;z-index:1}
+#total{font-size:2rem;font-weight:700}.ok{color:var(--ok)}.bad{color:var(--bad)}
+table{width:100%;border-collapse:collapse;font-size:.95rem}td{padding:4px 0;border-bottom:1px solid var(--line)}td:last-child{text-align:right}
+.cta{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin:8px 8px 0 0}
+ul.kit li{margin:8px 0}footer{margin-top:48px;font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body><main>
+<h1>F-2-7 Points Calculator</h1>
+<p class="muted">Korea's points-based residence visa. You need <strong>80 points</strong>. Table revised 18 Dec 2025. Nothing you type leaves your browser.</p>
+
+<div id="result"><span id="total">0</span> / 80 <span id="verdict"></span>
+<table id="breakdown"></table></div>
+
+<form id="f">
+<label>Age <input name="age" type="number" min="18" max="99" value="30"></label>
+<label>Highest degree <select name="edu">
+<option value="none">None / high school</option>
+<option value="assoc">Associate (2-year), other field</option>
+<option value="assoc_stem">Associate, science or engineering</option>
+<option value="ba" selected>Bachelor's, other field</option>
+<option value="ba_stem">Bachelor's, science or engineering (or 2 bachelor's)</option>
+<option value="ms">Master's, other field</option>
+<option value="ms_stem">Master's, science or engineering (or 2 master's)</option>
+<option value="phd">PhD, other field</option>
+<option value="phd_stem">PhD, science or engineering (or 2 PhDs)</option>
+</select></label>
+<label>Korean: TOPIK or KIIP level <select name="korean">
+<option value="0">None</option><option value="1">1</option><option value="2">2</option>
+<option value="3">3</option><option value="4">4</option><option value="5">5 or 6</option>
+</select></label>
+<label>Last year's taxable income (만원) <input name="income" type="number" min="0" step="100" value="4000"></label>
+<p class="muted">Use the amount on your 소득금액증명 from Hometax, not your contract salary.</p>
+
+<h2>Bonus points <span class="muted">(max 40)</span></h2>
+<label>University bonus <select name="bonusUni">
+<option value="none">None</option>
+<option value="kr_ba">Korean university, bachelor's (+5)</option>
+<option value="kr_ms">Korean university, master's (+7)</option>
+<option value="kr_phd">Korean university, PhD (+10)</option>
+<option value="top500_ba">QS/THE top-500 university, bachelor's (+15)</option>
+<option value="top500_ms">QS/THE top-500 university, master's (+20)</option>
+<option value="top500_phd">QS/THE top-500 university, PhD (+30)</option>
+</select></label>
+<label class="chk"><input type="checkbox" name="bonus" value="kiip5">Completed KIIP level 5 (+10)</label>
+<label class="chk"><input type="checkbox" name="bonus" value="allied">Outstanding talent from a Korean War allied nation (+20)</label>
+<label class="chk"><input type="checkbox" name="bonus" value="ministry">Recommended by a central government ministry (+20)</label>
+<label>Registered volunteer work (1365 / VMS) <select name="volunteer">
+<option value="0">None</option><option value="1">1 to 2 years (+1)</option>
+<option value="2">2 to 3 years (+5)</option><option value="3">3+ years (+7)</option>
+</select></label>
+
+<h2>Deductions</h2>
+<label>Immigration Act fines, last 3 to 5 years <select name="dedImm">
+<option value="0">None</option><option value="1">Fine 50만 to 100만 (−10)</option>
+<option value="2">Fine 100만 to 300만 (−20)</option><option value="3">Fine 300만+, departure order or deportation (−30)</option>
+</select></label>
+<label>Criminal fines, last 3 years <select name="dedCrim">
+<option value="0">None</option><option value="1">Under 200만 (−20)</option>
+<option value="2">200만 to 300만 (−30)</option><option value="3">300만+ (disqualified)</option>
+</select></label>
+</form>
+
+<h2 id="gap-h" hidden>Cheapest ways to close the gap</h2>
+<ul id="gap"></ul>
+
+<h2>I went through this myself</h2>
+<p>French engineer, 5 years in Korea, got the F-2-7 on a points file I built from scratch. I wrote down the documents I actually brought, the Hometax screens, the timeline and the two mistakes that cost me a month.</p>
+<a class="cta" id="guide" href="#">Get the guide (PDF)</a>
+<a class="cta" id="kofi" href="#" style="background:#ff5e5b">Buy me a coffee</a>
+
+<h2>Just landed? Things I actually bought</h2>
+<p class="muted">Affiliate links to Coupang. Same price for you, a few won for me.</p>
+<ul class="kit" id="kit"></ul>
+
+<h2>FAQ</h2>
+<p><strong>Do I need TOPIK?</strong> No. If age, degree and income already reach 80, Korean is optional. It is the cheapest 5 to 20 points for most people though.</p>
+<p><strong>How long must I have stayed?</strong> 3 consecutive years on E-1 to E-7 or D-5 to D-9, waived if last year's taxable income was 40 million won or more.</p>
+<p><strong>Which income counts?</strong> The taxable income on last year's 소득금액증명 issued by the National Tax Service. Contract salary is not used.</p>
+<p><strong>Do university bonuses stack?</strong> No. Only the highest one counts, and all bonuses together cap at 40.</p>
+
+<footer>Not legal advice. Points tables change; confirm on <a href="https://www.hikorea.go.kr">HiKorea</a> or at your immigration office before applying. Source table: Ministry of Justice revision of 18 Dec 2025.</footer>
+</main>
+
+<script type="module">
+import { score, PASS } from './score.js';
+// ---- edit these ----
+const CONFIG = {
+  guide: 'https://GUMROAD_URL',      // TODO Kevin: Gumroad product link
+  kofi: 'https://ko-fi.com/KOFI_USER', // TODO Kevin: Ko-fi username
+  kit: [ // TODO Kevin: replace href with Coupang Partners short links
+    ['Korean-English keyboard stickers', 'https://link.coupang.com/TODO'],
+    ['220V power strip with USB-C', 'https://link.coupang.com/TODO'],
+    ['Air purifier (fine dust season starts in March)', 'https://link.coupang.com/TODO'],
+    ['Dehumidifier for 장마', 'https://link.coupang.com/TODO'],
+    ['Electric blanket for 온돌-less rooms', 'https://link.coupang.com/TODO'],
+    ['T-money card', 'https://link.coupang.com/TODO'],
+    ['Document folder for immigration paperwork', 'https://link.coupang.com/TODO'],
+    ['Shoe rack for the 현관', 'https://link.coupang.com/TODO'],
+  ],
+};
+// --------------------
+document.getElementById('guide').href = CONFIG.guide;
+document.getElementById('kofi').href = CONFIG.kofi;
+document.getElementById('kit').innerHTML = CONFIG.kit.map(([t, h]) => `<li><a href="${h}" rel="sponsored nofollow" target="_blank">${t}</a></li>`).join('');
+
+const f = document.getElementById('f');
+const LABELS = { age: 'Age', edu: 'Education', korean: 'Korean', income: 'Income', bonus: 'Bonus', ded: 'Deductions' };
+function read() {
+  const d = Object.fromEntries(new FormData(f));
+  return { age: +d.age, edu: d.edu, korean: +d.korean, income: +d.income * 10000, bonusUni: d.bonusUni,
+    bonus: [...f.querySelectorAll('[name=bonus]:checked')].map(e => e.value), volunteer: +d.volunteer, dedImm: +d.dedImm, dedCrim: +d.dedCrim };
+}
+function gapTips(a, s) {
+  const tips = [];
+  if (s.korean < 20) { const next = a.korean + 1; tips.push(`TOPIK/KIIP level ${next}: +${score({ ...a, korean: next }).korean - s.korean} points`); }
+  if (!a.bonus.includes('kiip5')) tips.push('Finish KIIP level 5: +10 bonus on top of the 20 language points');
+  const nextIncome = [[30e6, '3,000만'], [40e6, '4,000만'], [50e6, '5,000만'], [60e6, '6,000만']].find(([v]) => a.income < v);
+  if (nextIncome) tips.push(`Taxable income above ${nextIncome[1]}원: +${score({ ...a, income: nextIncome[0] }).income - s.income} points`);
+  if (a.volunteer < 3) tips.push('Register volunteer hours on 1365.go.kr now, it only counts from registration date');
+  return tips;
+}
+function render() {
+  const a = read(), s = score(a);
+  document.getElementById('total').textContent = s.total;
+  const v = document.getElementById('verdict');
+  v.textContent = s.pass ? 'eligible' : (a.dedCrim === 3 ? 'disqualified' : `${PASS - s.total} short`);
+  v.className = s.pass ? 'ok' : 'bad';
+  document.getElementById('breakdown').innerHTML = Object.entries(LABELS).map(([k, l]) => `<tr><td>${l}</td><td>${s[k]}</td></tr>`).join('');
+  const tips = s.pass ? [] : gapTips(a, s);
+  document.getElementById('gap-h').hidden = !tips.length;
+  document.getElementById('gap').innerHTML = tips.map(t => `<li>${t}</li>`).join('');
+}
+f.addEventListener('input', render); render();
+</script>
+</body></html>
