@@ -45,8 +45,8 @@ On the 간편인증 screen, pick the app, enter your name as it appears on the A
 
    The notice at the top of the form is also where Hometax states the availability dates: last year's certificate for salaried people from 1 May, for 종합소득세 filers from 1 July.
 
-4. Click **신청하기**.
-5. Go to **민원증명** → **민원신청 처리결과 조회**. The certificate is there within seconds. Open it, print to PDF with your browser, and print one paper copy for the file. Each certificate carries a 발급번호 so the officer can verify it online.
+4. Click **신청하기** at the bottom. A popup reminds you that a request cannot be edited or cancelled once sent. Confirm. A wrong certificate costs nothing; you simply request another.
+5. The completion page shows your request summary and a button, **민원처리결과 조회**. Click it. The same list is always reachable under **민원증명** → **민원신청 처리결과 조회**. The certificate is there within seconds. Open it, print to PDF with your browser, and print one paper copy for the file. Each certificate carries a 발급번호 so the officer can verify it online.
 
 ## Option 2: Hometax on your phone (손택스)
 
