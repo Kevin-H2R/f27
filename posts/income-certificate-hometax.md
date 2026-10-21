@@ -50,7 +50,11 @@ On the 간편인증 screen, pick the app, enter your name as it appears on the A
 4. Click **신청하기** at the bottom. A popup reminds you that a request cannot be edited or cancelled once sent. Confirm. A wrong certificate costs nothing; you simply request another.
 
    <img src="img/hometax-confirm.jpg" alt="Confirmation popup: the request is complete, submit? It cannot be edited or cancelled afterwards. Buttons 취소 and 신청하기" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
-5. The completion page shows your request summary and a button, **민원처리결과 조회**. Click it. The same list is always reachable under **민원증명** → **민원신청 처리결과 조회**. The certificate is there within seconds. Open it, print to PDF with your browser, and print one paper copy for the file. Each certificate carries a 발급번호 so the officer can verify it online.
+5. The completion page shows your request summary and a button, **민원처리결과 조회**. Click it. The same list is always reachable under **민원증명** → **민원신청 처리결과 조회**.
+
+   <img src="img/hometax-confirmation.jpg" alt="Completion page: 소득금액증명 신청이 완료되었습니다, with the request summary and the 민원처리결과 조회 button" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
+
+6. The results table lists your request within seconds, status **처리완료**, with the 발급번호 the officer can verify online and a counter **발급수량 0/1**. Click **출력** at the end of the row. The counter is the number of prints you are allowed from this request, so use the browser's print dialog and choose save as PDF, then print paper copies from the PDF. If you use up the counter, request the certificate again; it is free and instant. 
 
 ## Option 2: Hometax on your phone (손택스)
 
