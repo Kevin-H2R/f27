@@ -37,4 +37,4 @@ I registered mine under the F-2-7 at the counter. Went in the morning, had the �
 
 ## For the F-2-7 renewal
 
-Immigration accepts 사업소득 the same as salary. Bring the 사업자등록증, the 소득금액증명, and the May 종합소득세 return receipt. The 7 to 1 July availability of the income certificate applies to you, so file renewal after July if last year's income was better than the year before.
+Immigration accepts 사업소득 the same as salary. Bring the 사업자등록증, the 소득금액증명, and the May 종합소득세 return receipt. The 1 July availability of the income certificate applies to you, so file renewal after July if last year's income was better than the year before.
