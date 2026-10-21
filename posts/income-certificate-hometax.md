@@ -32,13 +32,19 @@ On the 간편인증 screen, pick the app, enter your name as it appears on the A
 2. Type **소득금액증명** in the search box at the top of the page. Under 서비스 바로가기 on the left, click the first **소득금액증명**. Do not try the menus: on the 2025 layout the 민원증명 menu does not lead to the certificate at all.
 
    <img src="img/hometax-search.jpg" alt="Hometax search box with 소득금액증명 typed, and the 소득금액증명 link under 서비스 바로가기" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
-3. Check your name and ARC number on the first screen, then fill the form:
-   - **국문/영문**: Korean or English version. Immigration takes the Korean one. The English one is handy for a foreign bank or embassy.
-   - **과세기간**: the year, usually last year.
-   - **소득종류**: 근로소득 for salary, 사업소득 for freelance or business, 종합소득 if you have both.
-   - **사용용도 / 제출처**: pick 기타 or 제출용, then write 출입국 (immigration) in the free field. Nothing checks it.
-   - **주민등록번호 공개 여부**: 공개 (show full number). Immigration wants the full ARC number visible.
-   - **수령방법**: 인터넷발급·출력.
+3. The page is titled 소득금액증명신청서. The top block, 기본 인적 사항, is prefilled from your ARC: check the name and phone number. The block that matters is 신청내용:
+   - **발급유형**: 한글증명 for immigration. 영문증명 exists and is handy for a foreign bank or embassy, but file the Korean one.
+   - **과세기간**: from and to, in years. Last year to last year. You can ask for several years in one certificate if the office wants history.
+   - **원천징수의무자 전체표시 여부**: only applies to daily-wage workers. Leave it.
+   - **소득발생처(상호, 사업자번호) 공개여부**: 공개. This prints your employer's name and registration number, which the officer matches against your contract.
+   - **사용용도**: the purpose. Pick the government or public office option if the list has one, otherwise 기타.
+   - **제출처**: where it goes. 출입국·외국인관서 if listed, otherwise 기타.
+   - **주소 공개여부** and **주민등록번호 공개여부**: 공개 for both. A masked ARC number or address gets the certificate sent back.
+   - **수령방법**: the internet issue and print option.
+   - **발급희망수량**: 1. It is a PDF, print as many as you like.
+
+   The notice at the top of the form is also where Hometax states the availability dates: last year's certificate for salaried people from 1 May, for 종합소득세 filers from 1 July.
+
 4. Click **신청하기**.
 5. Go to **민원증명** → **민원신청 처리결과 조회**. The certificate is there within seconds. Open it, print to PDF with your browser, and print one paper copy for the file. Each certificate carries a 발급번호 so the officer can verify it online.
 
