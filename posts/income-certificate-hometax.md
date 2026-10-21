@@ -5,7 +5,7 @@ date: 2026-10-21
 
 The 소득금액증명 is the National Tax Service certificate of your taxable income for a given year. Immigration uses it for the F-2-7 points, banks use it for loans, and landlords sometimes ask for it. It is free, instant, and the Hometax screens for it are Korean-only. This is the walkthrough.
 
-<div class="note"><strong>The number that matters.</strong> The certificate shows two figures: 총급여 (gross salary) and 소득금액 (taxable income, after the earned-income deduction). Immigration counts <strong>소득금액</strong>. It is usually 10 to 20 percent below your gross salary, so count your F-2-7 points from this certificate, not from your contract.</div>
+<div class="note"><strong>The number that matters.</strong> The certificate has three columns: 수입금액 (gross income, the same figure as 총급여 on your withholding receipt), 소득금액 (taxable income, after the earned-income deduction) and 총결정세액 (total tax determined for the year). Immigration counts <strong>소득금액</strong>. It is usually 10 to 20 percent below your gross salary, so count your F-2-7 points from this certificate, not from your contract.</div>
 
 ## When last year's income shows up
 

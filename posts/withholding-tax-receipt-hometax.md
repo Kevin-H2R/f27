@@ -21,7 +21,7 @@ Employers must file by 10 March for the previous year. It shows up on Hometax in
 ## The numbers on it
 
 - **총급여** (box 21): gross salary for the year. The headline number, not the one immigration counts.
-- **근로소득금액** (box 23): gross minus the earned-income deduction. This is the figure that appears on the 소득금액증명 as 소득금액 and that the F-2-7 points use.
+- **근로소득금액** (box 23): gross minus the earned-income deduction. This is the figure that appears on the 소득금액증명 as 소득금액 and that the F-2-7 points use. The 총급여 line shows up there as 수입금액.
 - **결정세액**: the tax actually due for the year, after credits.
 - **차감징수세액**: what you paid in or got back at settlement. Negative means a refund.
 
