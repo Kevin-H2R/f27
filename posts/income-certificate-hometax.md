@@ -20,19 +20,20 @@ Apply for the F-2-7 in March and the newest certificate you can get is for the y
 
 ## Option 1: Hometax on a computer
 
-You need a verified login, not just the Hometax ID and password. Certificates require 간편인증 (Kakao, Naver, PASS, Toss or your bank app), a 공동인증서 or a 금융인증서. If you are logged in with ID and password, Hometax shows a popup asking you to log in again the secure way the moment you click 소득금액증명. Pick 간편인증, choose your app, approve on your phone. A Korean credit card in your name also works, under 신용카드 인증. Foreigners authenticate with the 외국인등록번호 on the ARC and a Korean phone number in their own name.
+You need a Hometax account and one of the verified login methods: 간편인증 (Kakao, Naver, PASS, Toss or your bank app), a 공동인증서, a 금융인증서 or a Korean credit card in your name. Foreigners authenticate with the 외국인등록번호 on the ARC and a Korean phone number in their own name.
 
-<img src="img/hometax-auth.jpg" alt="Hometax popup asking for additional identity verification: 간편 인증, 공동·금융 인증, 신용카드 인증" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
-
-<img src="img/hometax-auth2.jpg" alt="Hometax 간편인증 screen: list of apps (KakaoTalk, Naver, PASS, Toss, bank apps) and the name, birth date, phone number form" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
-
-On the 간편인증 screen, pick the app, enter your name as it appears on the ARC, your date of birth and phone number, tick both consents, press 인증 요청, and approve the request in the app.
-
-1. Go to hometax.go.kr and log in.
+1. Go to hometax.go.kr and log in. ID and password is enough for this step.
 2. Type **소득금액증명** in the search box at the top of the page. Under 서비스 바로가기 on the left, click the first **소득금액증명**. Do not try the menus: on the 2025 layout the 민원증명 menu does not lead to the certificate at all.
 
    <img src="img/hometax-search.jpg" alt="Hometax search box with 소득금액증명 typed, and the 소득금액증명 link under 서비스 바로가기" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
-3. The page is titled 소득금액증명신청서. The top block, 기본 인적 사항, is prefilled from your ARC: check the name and phone number. The block that matters is 신청내용:
+
+3. A popup titled 사용자인증 선택 appears. Certificates need a verified login on top of the password one. Pick **간편 인증**, choose your app, enter your name as it appears on the ARC, date of birth and phone number, tick both consents, press 인증 요청, and approve the request in the app. 신용카드 인증 works too if you have a Korean credit card.
+
+   <img src="img/hometax-auth.jpg" alt="Hometax popup asking for additional identity verification: 간편 인증, 공동·금융 인증, 신용카드 인증" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
+
+   <img src="img/hometax-auth2.jpg" alt="Hometax 간편인증 screen: list of apps (KakaoTalk, Naver, PASS, Toss, bank apps) and the name, birth date, phone number form" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
+
+4. The page is titled 소득금액증명신청서. The top block, 기본 인적 사항, is prefilled from your ARC: check the name and phone number. The block that matters is 신청내용:
    - **발급유형**: 한글증명 for immigration. 영문증명 exists and is handy for a foreign bank or embassy, but file the Korean one.
    - **과세기간**: from and to, in years. Last year to last year. You can ask for several years in one certificate if the office wants history.
    - **원천징수의무자 전체표시 여부**: only applies to daily-wage workers. Leave it.
@@ -47,14 +48,14 @@ On the 간편인증 screen, pick the app, enter your name as it appears on the A
 
    The notice at the top of the form is also where Hometax states the availability dates: last year's certificate for salaried people from 1 May, for 종합소득세 filers from 1 July.
 
-4. Click **신청하기** at the bottom. A popup reminds you that a request cannot be edited or cancelled once sent. Confirm. A wrong certificate costs nothing; you simply request another.
+5. Click **신청하기** at the bottom. A popup reminds you that a request cannot be edited or cancelled once sent. Confirm. A wrong certificate costs nothing; you simply request another.
 
    <img src="img/hometax-confirm.jpg" alt="Confirmation popup: the request is complete, submit? It cannot be edited or cancelled afterwards. Buttons 취소 and 신청하기" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
-5. The completion page shows your request summary and a button, **민원처리결과 조회**. Click it. The same list is always reachable under **민원증명** → **민원신청 처리결과 조회**.
+6. The completion page shows your request summary and a button, **민원처리결과 조회**. Click it. The same list is always reachable under **민원증명** → **민원신청 처리결과 조회**.
 
    <img src="img/hometax-confirmation.jpg" alt="Completion page: 소득금액증명 신청이 완료되었습니다, with the request summary and the 민원처리결과 조회 button" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
 
-6. The results table lists your request within seconds, status **처리완료**, with the 발급번호 the officer can verify online and a counter **발급수량 0/1**. Click **출력** at the end of the row. A warning modal explains that forging a tax certificate is a crime and asks whether to issue it; press 예. A printer dialog opens after a few seconds. The counter is the number of prints you are allowed from this request, so choose save as PDF in that dialog, then print paper copies from the PDF. If the dialog does not appear or you close it, request the certificate again from the search box; it is free and instant.
+7. The results table lists your request within seconds, status **처리완료**, with the 발급번호 the officer can verify online and a counter **발급수량 0/1**. Click **출력** at the end of the row. A warning modal explains that forging a tax certificate is a crime and asks whether to issue it; press 예. A printer dialog opens after a few seconds. The counter is the number of prints you are allowed from this request, so choose save as PDF in that dialog, then print paper copies from the PDF. If the dialog does not appear or you close it, request the certificate again from the search box; it is free and instant.
 
    <img src="img/hometax-table.jpg" alt="민원처리결과조회 results table: one row, 소득금액증명, status 처리완료, 발급수량 0/1, and the 출력 button" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
 
