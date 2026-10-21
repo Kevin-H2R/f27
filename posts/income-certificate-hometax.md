@@ -43,9 +43,13 @@ On the 간편인증 screen, pick the app, enter your name as it appears on the A
    - **수령방법**: **인터넷발급(프린터출력)**, which gives a printable PDF. 인터넷열람(화면조회) is view-only and 전자문서지갑 sends it to a government e-wallet app the officer will not open.
    - **발급희망수량**: 1. It is a PDF, print as many as you like.
 
+   <img src="img/hometax-form.jpg" alt="The 신청내용 block of the 소득금액증명 request form filled in for immigration: 한글증명, year, 공개 on all disclosure options, 여권또는비자신청용, 관공서, 인터넷발급(프린터출력), 1매" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
+
    The notice at the top of the form is also where Hometax states the availability dates: last year's certificate for salaried people from 1 May, for 종합소득세 filers from 1 July.
 
 4. Click **신청하기** at the bottom. A popup reminds you that a request cannot be edited or cancelled once sent. Confirm. A wrong certificate costs nothing; you simply request another.
+
+   <img src="img/hometax-confirm.jpg" alt="Confirmation popup: the request is complete, submit? It cannot be edited or cancelled afterwards. Buttons 취소 and 신청하기" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
 5. The completion page shows your request summary and a button, **민원처리결과 조회**. Click it. The same list is always reachable under **민원증명** → **민원신청 처리결과 조회**. The certificate is there within seconds. Open it, print to PDF with your browser, and print one paper copy for the file. Each certificate carries a 발급번호 so the officer can verify it online.
 
 ## Option 2: Hometax on your phone (손택스)
