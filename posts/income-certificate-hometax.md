@@ -54,7 +54,7 @@ On the 간편인증 screen, pick the app, enter your name as it appears on the A
 
    <img src="img/hometax-confirmation.jpg" alt="Completion page: 소득금액증명 신청이 완료되었습니다, with the request summary and the 민원처리결과 조회 button" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
 
-6. The results table lists your request within seconds, status **처리완료**, with the 발급번호 the officer can verify online and a counter **발급수량 0/1**. Click **출력** at the end of the row. The counter is the number of prints you are allowed from this request, so use the browser's print dialog and choose save as PDF, then print paper copies from the PDF. If you use up the counter, request the certificate again; it is free and instant. 
+6. The results table lists your request within seconds, status **처리완료**, with the 발급번호 the officer can verify online and a counter **발급수량 0/1**. Click **출력** at the end of the row. A warning modal explains that forging a tax certificate is a crime and asks whether to issue it; press 예. A printer dialog opens after a few seconds. The counter is the number of prints you are allowed from this request, so choose save as PDF in that dialog, then print paper copies from the PDF. If the dialog does not appear or you close it, request the certificate again from the search box; it is free and instant. 
 
 ## Option 2: Hometax on your phone (손택스)
 
