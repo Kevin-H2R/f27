@@ -20,7 +20,13 @@ Apply for the F-2-7 in March and the newest certificate you can get is for the y
 
 ## Option 1: Hometax on a computer
 
-You need a verified login, not just the Hometax ID and password. Certificates require 간편인증 (Kakao, Naver, PASS, Toss or your bank app), a 공동인증서 or a 금융인증서. If you are logged in with ID and password, Hometax shows a popup asking you to log in again the secure way the moment you click 소득금액증명. Pick 간편인증, choose your app, approve on your phone. Foreigners authenticate with the 외국인등록번호 on the ARC and a Korean phone number in their own name.
+You need a verified login, not just the Hometax ID and password. Certificates require 간편인증 (Kakao, Naver, PASS, Toss or your bank app), a 공동인증서 or a 금융인증서. If you are logged in with ID and password, Hometax shows a popup asking you to log in again the secure way the moment you click 소득금액증명. Pick 간편인증, choose your app, approve on your phone. A Korean credit card in your name also works, under 신용카드 인증. Foreigners authenticate with the 외국인등록번호 on the ARC and a Korean phone number in their own name.
+
+<img src="img/hometax-auth.jpg" alt="Hometax popup asking for additional identity verification: 간편 인증, 공동·금융 인증, 신용카드 인증" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
+
+<img src="img/hometax-auth2.jpg" alt="Hometax 간편인증 screen: list of apps (KakaoTalk, Naver, PASS, Toss, bank apps) and the name, birth date, phone number form" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:10px;margin:8px 0">
+
+On the 간편인증 screen, pick the app, enter your name as it appears on the ARC, your date of birth and phone number, tick both consents, press 인증 요청, and approve the request in the app.
 
 1. Go to hometax.go.kr and log in.
 2. Type **소득금액증명** in the search box at the top of the page. Under 서비스 바로가기 on the left, click the first **소득금액증명**. Do not try the menus: on the 2025 layout the 민원증명 menu does not lead to the certificate at all.
