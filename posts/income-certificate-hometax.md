@@ -20,7 +20,7 @@ Apply for the F-2-7 in March and the newest certificate you can get is for the y
 
 ## Option 1: Hometax on a computer
 
-You need a way to log in. Any of these works: 공동인증서 (joint certificate from your bank), 간편인증 (Kakao, Naver, PASS, or your bank app), or the Hometax ID you registered at a tax office. Foreigners log in with the 외국인등록번호 on the ARC.
+You need a verified login, not just the Hometax ID and password. Certificates require 간편인증 (Kakao, Naver, PASS, Toss or your bank app), a 공동인증서 or a 금융인증서. If you are logged in with ID and password, Hometax shows a popup asking you to log in again the secure way the moment you click 소득금액증명. Pick 간편인증, choose your app, approve on your phone. Foreigners authenticate with the 외국인등록번호 on the ARC and a Korean phone number in their own name.
 
 1. Go to hometax.go.kr and log in.
 2. Type **소득금액증명** in the search box at the top of the page. Under 서비스 바로가기 on the left, click the first **소득금액증명**. Do not try the menus: on the 2025 layout the 민원증명 menu does not lead to the certificate at all.
