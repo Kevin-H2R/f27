@@ -36,11 +36,11 @@ On the 간편인증 screen, pick the app, enter your name as it appears on the A
    - **발급유형**: 한글증명 for immigration. 영문증명 exists and is handy for a foreign bank or embassy, but file the Korean one.
    - **과세기간**: from and to, in years. Last year to last year. You can ask for several years in one certificate if the office wants history.
    - **원천징수의무자 전체표시 여부**: only applies to daily-wage workers. Leave it.
-   - **소득발생처(상호, 사업자번호) 공개여부**: 공개. This prints your employer's name and registration number, which the officer matches against your contract.
-   - **사용용도**: the purpose. Pick the government or public office option if the list has one, otherwise 기타.
-   - **제출처**: where it goes. 출입국·외국인관서 if listed, otherwise 기타.
-   - **주소 공개여부** and **주민등록번호 공개여부**: 공개 for both. A masked ARC number or address gets the certificate sent back.
-   - **수령방법**: the internet issue and print option.
+   - **소득발생처(상호, 사업자번호) 공개여부**: **공개**. This prints your employer's name and registration number, which the officer matches against your contract.
+   - **사용용도**: the purpose. Pick **여권 또는 비자 신청용**, passport or visa application. The list also has 대출용 for loans and 금융기관제출용 for banks.
+   - **제출처**: where it goes. **관공서**, government office.
+   - **주소 공개여부** and **주민등록번호 공개여부**: **공개** for both. 공개 means shown in full, 비공개 means masked with asterisks, and immigration sends masked certificates back.
+   - **수령방법**: **인터넷발급(프린터출력)**, which gives a printable PDF. 인터넷열람(화면조회) is view-only and 전자문서지갑 sends it to a government e-wallet app the officer will not open.
    - **발급희망수량**: 1. It is a PDF, print as many as you like.
 
    The notice at the top of the form is also where Hometax states the availability dates: last year's certificate for salaried people from 1 May, for 종합소득세 filers from 1 July.
