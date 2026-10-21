@@ -23,7 +23,7 @@ Apply for the F-2-7 in March and the newest certificate you can get is for the y
 You need a way to log in. Any of these works: 공동인증서 (joint certificate from your bank), 간편인증 (Kakao, Naver, PASS, or your bank app), or the Hometax ID you registered at a tax office. Foreigners log in with the 외국인등록번호 on the ARC.
 
 1. Go to hometax.go.kr and log in.
-2. Top menu: **증명·등록·신청·사업장현황** → **즉시발급 증명** → **소득금액증명**.
+2. Top menu: **증명·등록·신청·사업장현황** → **민원증명** → **소득금액증명**.
 3. Fill the request form:
    - **과세기간**: the year, usually last year.
    - **소득종류**: 근로소득 for salary, 사업소득 for freelance or business, 종합소득 if you have both.
